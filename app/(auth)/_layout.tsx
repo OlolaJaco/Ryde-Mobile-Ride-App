@@ -1,7 +1,14 @@
 import "../../global.css";
-import { Stack } from "expo-router";
+import { Redirect, Stack } from "expo-router";
+import { useAuth } from "@clerk/clerk-expo";
 
-const Layout = () => {
+const AuthRoutesLayout = () => {
+  const { isSignedIn } = useAuth();
+
+  if (isSignedIn) {
+    return <Redirect href={'/(root)/(tabs)/home'} />
+  }
+
   return(
 <Stack>
   <Stack.Screen name='welcome' options={{ headerShown: false }} />
@@ -11,4 +18,4 @@ const Layout = () => {
   ) ;
 }
 
-export default Layout;
+export default AuthRoutesLayout();
