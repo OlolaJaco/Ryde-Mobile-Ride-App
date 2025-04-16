@@ -18,7 +18,6 @@ export default function TabsLayout() {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            flexDirection: 'row',
             position: "absolute"
         },
         }}
