@@ -18,4 +18,4 @@ const AuthRoutesLayout = () => {
   ) ;
 }
 
-export default AuthRoutesLayout();
+export default AuthRoutesLayout;
